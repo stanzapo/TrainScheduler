@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Train Scheduler</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<style>
+    table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.submit {
+  display: block;
+}
+
+caption {
+  background-color: #69306D;
+  color: white;
+  font-size: 20px;
+  padding-left: 20px;
+  text-align: center;
+}
+
+.heading {
+  background-color: #69306D;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  margin-top: 0px;
+}
+
+#schedule, #addTrain {
+  border: 2px solid #69306D;
+  margin: 10px;
+}
+
+.formHead {
+  padding: 10px;
+}
+
+h1 {
+  background-color: #69306D;
+  color: white;
+  text-align: center;
+  margin-top: 0px;
+  padding: 20px;
+}
+
+.submit {
+  border: none;
+  background-color: #69306D;
+  padding: 10px;
+  color: white;
+  margin-top: 30px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.elem {
+  margin: 10px;
+}
+
+.inputSlot {
+  width: 100%;
+}
+
+  </style>
+</head>
+
+<body>
+  <h1>Train Listing</h1>
+  <div class="container">
+    <div class="row">
+    </div>
+    <div class="row" id='schedule'>
+      <table id='content'>
+        <caption>Current Train Schedule</caption>
+          <tr>
+            <th class='title'>Train Name</th>
+            <th class='title'>Destination</th>
+            <th class='title'>Frequency(min)</th>
+            <th class='title'>Next arrival</th>
+            <th class='title'>Minutes away</th>
+          </tr>
+          <div id="TrainData">
+          </div>
+
+      </table>
+    </div>
+
+    <div class="row" id='addTrain'>
+      <h3 class='heading'>Add Train</h3>
+      <div class="formHead">
+        <div class="elem">
+          <p><label for="name">Train Name:</label></p>
+          <input id="name" class="inputSlot" type="text">
+        </div>
+        <div class="elem">
+          <p><label for="email">Destination:</label></p>
+          <input id="destination" class="inputSlot" type="text">
+        </div>
+        <div class="elem">
+          <p><label for="message">First Train Time: (HH:MM - military time)</label></p>
+          <input id="time" class="inputSlot" type="text">
+        </div>
+        <div class="elem">
+          <p><label for="message">Frequency</label></p>
+          <input id="frequency" class="inputSlot" type="text">
+        </div>
+        <input class="submit" type="submit" name="Submit" value="Submit">
+      </div>
+    </div>
+
+  </div>
+  <script src="https://code.jquery.com/jquery-1.12.4.js" charset="utf-8"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js" charset="utf-8"></script>
+  <script src="assets/js/app.js" charset="utf-8"></script>
+</body>
+
+</html>
